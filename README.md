@@ -18,3 +18,58 @@
 * Add more unit tests;
 * Create better errors handling at backend;
 * Polish frontend;
+
+## Test data samples
+
+**Request**
+
+`GET` `https://localhost/challenge/getTasksList`
+
+**Response**
+
+```json
+[
+    {
+        "id": 1,
+        "name": "Python add",
+        "description": "Write in Python function body, which takes its parameters, adds them and returns a result",
+        "functionHeader": "def fnc(val1, val2):",
+        "functionFooter": "    return result"
+    },
+    {
+        "id": 2,
+        "name": "Python modulo",
+        "description": "Write in Python function body, which takes its parameters, performs modulo operation on them and returns a result",
+        "functionHeader": "def fnc(val1, val2):",
+        "functionFooter": "    return result"
+    },
+    {
+        "id": 3,
+        "name": "Python subtract",
+        "description": "Write in Python function body, which takes its parameters, subtracts them and returns a result",
+        "functionHeader": "def fnc(val1, val2):",
+        "functionFooter": "    return result"
+    }
+]
+```
+
+**Request**
+
+`POST` `https://localhost/challenge/submitTask`
+
+```json
+{
+    "taskId": 1,
+    "developersName": "Name",
+    "code": "result = val1 + val2"
+}
+```
+
+**Response**
+
+```json
+{
+    "success": true,
+    "error": null
+}
+```
