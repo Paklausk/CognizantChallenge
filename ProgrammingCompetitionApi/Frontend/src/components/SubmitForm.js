@@ -23,7 +23,7 @@ function SubmitForm(props) {
 		getTasksList(function (tasks) {
 			setTasks(tasks);
 		}, function (error) {
-			setFail(error.message);
+			setFailNotificationMessage(error.message);
 		});
 	}, []);
 	useEffect(() => {
@@ -40,6 +40,8 @@ function SubmitForm(props) {
 		setSelectedTask(selectedTask);
 	}
 	function onSubmitClick() {
+		setShowSuccessNotification(false);
+		setFailNotificationMessage(null);
 		if (!validateInputs()) return;
 
 		setIsSubmitting(true);
@@ -51,37 +53,29 @@ function SubmitForm(props) {
 		submitTask(submitData, function (response) {
 			setIsSubmitting(false);
 			if (response.success)
-				setSuccess();
-			else setFail(response.error ?? 'Received error from server');
+				setShowSuccessNotification(true);
+			else setFailNotificationMessage(response.error ?? 'Received error from server');
 
 		}, function (error) {
 			setIsSubmitting(false);
-			setFail(error.message);
+			setFailNotificationMessage(error.message);
 		});
 	}
 	function validateInputs() {
 		if (!selectedTask) {
-			setFail('No task selected');
+			setFailNotificationMessage('No task selected');
 			return false;
 		}
 		if (nameTagRef.current.value == '') {
-			setFail('Developers name cannot be empty');
+			setFailNotificationMessage('Developers name cannot be empty');
 			return false;
 		}
 		if (codeTagRef.current.value == '') {
-			setFail('Solution code cannot be empty');
+			setFailNotificationMessage('Solution code cannot be empty');
 			return false;
 		}
 
 		return true;
-	}
-	function setSuccess() {
-		setShowSuccessNotification(true);
-		setFailNotificationMessage(null);
-	}
-	function setFail(message) {
-		setFailNotificationMessage(message);
-		setShowSuccessNotification(false);
 	}
 
 	return (
