@@ -1,0 +1,54 @@
+.animate-content {
+	&.animate-delay {
+		-webkit-transition: transform .5s cubic-bezier(.65,.45,.23,1.02) .15s, opacity .5s cubic-bezier(.65,.45,.23,1.02) .15s;
+		-o-transition: transform .5s cubic-bezier(.65,.45,.23,1.02) .15s, opacity .5s cubic-bezier(.65,.45,.23,1.02) .15s;
+		transition: transform .5s cubic-bezier(.65,.45,.23,1.02) .15s, opacity .5s cubic-bezier(.65,.45,.23,1.02) .15s;
+	}
+	&.animate-delay2 {
+		-webkit-transition: transform .4s cubic-bezier(.65,.45,.23,1.02) .2s, opacity .4s cubic-bezier(.65,.45,.23,1.02) .2s;
+		-o-transition: transform .4s cubic-bezier(.65,.45,.23,1.02) .2s, opacity .4s cubic-bezier(.65,.45,.23,1.02) .2s;
+		transition: transform .4s cubic-bezier(.65,.45,.23,1.02) .2s, opacity .4s cubic-bezier(.65,.45,.23,1.02) .2s;
+	}
+	&.animate-in {
+		margin-top: -20px;
+		-webkit-transform: translateY(20px);
+		-ms-transform: translateY(20px);
+		transform: translateY(20px);
+		opacity: 1;
+		padding-bottom: 1px;
+		margin-bottom: 20px;
+		padding-top: 1px;
+	}
+	&.animate-out {
+		-webkit-transform: translateY(0px);
+		-ms-transform: translateY(0px);
+		transform: translateY(0px);
+		opacity: 0
+	}
+    -webkit-transition: transform .5s cubic-bezier(.65,.45,.23,1.02) .1s, opacity .5s cubic-bezier(.65,.45,.23,1.02) .1s;
+    -o-transition: transform .5s cubic-bezier(.65,.45,.23,1.02) .1s, opacity .5s cubic-bezier(.65,.45,.23,1.02) .1s;
+    transition: transform .5s cubic-bezier(.65,.45,.23,1.02) .1s, opacity .5s cubic-bezier(.65,.45,.23,1.02) .1s;
+    opacity: 0;
+}
+.animate-out-me {
+	&.animate-out {
+		&.animate-delay {
+			-webkit-transition: all .5s cubic-bezier(.65,.45,.23,1.02) .2s !important;
+			-o-transition: all .5s cubic-bezier(.65,.45,.23,1.02) .2s !important;
+			transition: all .5s cubic-bezier(.65,.45,.23,1.02) .2s !important;
+		}
+		&.animate-delay2 {
+			-webkit-transition: all .4s cubic-bezier(.65,.45,.23,1.02) .25s !important;
+			-o-transition: all .4s cubic-bezier(.65,.45,.23,1.02) .25s !important;
+			transition: all .4s cubic-bezier(.65,.45,.23,1.02) .25s !important;
+		}
+		-webkit-transition: all .35s cubic-bezier(.165,.84,.44,1) .15s !important;
+		-o-transition: all .35s cubic-bezier(.165,.84,.44,1) .15s !important;
+		transition: all .35s cubic-bezier(.165,.84,.44,1) .15s !important;
+		-webkit-transform: translateY(-20px) !important;
+		-ms-transform: translateY(-20px) !important;
+		transform: translateY(-20px) !important;
+		opacity: 0 !important
+	}
+	opacity: 1;
+}

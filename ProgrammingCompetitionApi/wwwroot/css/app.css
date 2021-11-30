@@ -1,0 +1,118 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.animate-content {
+	-webkit-transition: transform 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.1s, opacity 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.1s;
+	-o-transition: transform 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.1s, opacity 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.1s;
+	transition: transform 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.1s, opacity 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.1s;
+	opacity: 0;
+}
+.animate-content.animate-delay {
+	-webkit-transition: transform 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.15s, opacity 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.15s;
+	-o-transition: transform 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.15s, opacity 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.15s;
+	transition: transform 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.15s, opacity 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.15s;
+}
+.animate-content.animate-delay2 {
+	-webkit-transition: transform 0.4s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.2s, opacity 0.4s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.2s;
+	-o-transition: transform 0.4s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.2s, opacity 0.4s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.2s;
+	transition: transform 0.4s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.2s, opacity 0.4s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.2s;
+}
+.animate-content.animate-in {
+	margin-top: -20px;
+	-webkit-transform: translateY(20px);
+	-ms-transform: translateY(20px);
+	transform: translateY(20px);
+	opacity: 1;
+	padding-bottom: 1px;
+	margin-bottom: 20px;
+	padding-top: 1px;
+}
+.animate-content.animate-out {
+	-webkit-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+	opacity: 0;
+}
+
+.animate-out-me {
+	opacity: 1;
+}
+.animate-out-me.animate-out {
+	-webkit-transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) 0.15s !important;
+	-o-transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) 0.15s !important;
+	transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) 0.15s !important;
+	-webkit-transform: translateY(-20px) !important;
+	-ms-transform: translateY(-20px) !important;
+	transform: translateY(-20px) !important;
+	opacity: 0 !important;
+}
+.animate-out-me.animate-out.animate-delay {
+	-webkit-transition: all 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.2s !important;
+	-o-transition: all 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.2s !important;
+	transition: all 0.5s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.2s !important;
+}
+.animate-out-me.animate-out.animate-delay2 {
+	-webkit-transition: all 0.4s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.25s !important;
+	-o-transition: all 0.4s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.25s !important;
+	transition: all 0.4s cubic-bezier(0.65, 0.45, 0.23, 1.02) 0.25s !important;
+}
+
+.app .header {
+	background-color: #0091c2;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+.app .header h1 {
+	font-size: 3rem;
+	padding: 5px 0;
+	text-transform: uppercase;
+}
+.app .header h3 {
+	font-size: 1rem;
+	padding: 5px 0;
+}
+.app .content {
+	display: flex;
+	align-items: center;
+}
+.app .container {
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	border-radius: 10px;
+	padding: 24px;
+	background-color: #fff;
+	position: relative;
+	outline: 0;
+	margin: auto;
+}
+
+.italic {
+	font-style: italic;
+}

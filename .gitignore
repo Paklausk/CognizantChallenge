@@ -1,0 +1,13 @@
+*.suo
+*.manifest
+*.obj
+*.pdb
+*.lib
+*.user
+packages/**
+.vs/**
+*/.vs/**
+*/bin/**
+*/obj/**
+*/packages/**
+*/*/node_modules/**

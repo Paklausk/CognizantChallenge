@@ -1,0 +1,38 @@
+$style-color: rgb(0, 145, 194);
+
+@import 'reset.css';
+@import 'animations.scss';
+
+.app {
+    .header {
+        h1 {
+            font-size: 3rem;
+            padding: 5px 0;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-size: 1rem;
+            padding: 5px 0;
+        }
+        background-color: $style-color;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    .content {
+        display: flex;
+        align-items: center;
+    }
+    .container {
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 10px;
+        padding: 24px;
+        background-color: #fff;
+        position: relative;
+        outline: 0;
+        margin: auto;
+    }
+}
+.italic {
+    font-style: italic;
+}

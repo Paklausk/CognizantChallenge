@@ -1,0 +1,55 @@
+{
+  "name": "programming-competition-ui",
+  "version": "1.0.0",
+  "description": "Cognizant challenge for Full-stack .NET Developer position",
+  "main": "src/index.js",
+  "author": "Paulius Urmonas",
+  "license": "ISC",
+  "scripts": {
+    "dev": "cls && webpack --progress --mode=development",
+    "prod": "cls && webpack --progress --mode=production",
+    "watch": "cls && webpack --watch --mode=development"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/lab": "^5.0.0-alpha.57",
+    "@mui/material": "^5.2.1",
+    "axios": "^0.24.0",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.3.0",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.3.0",
+    "sass": "^1.41.1",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.53.0",
+    "webpack-build-notifier": "^2.3.0",
+    "webpack-cli": "^4.8.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
