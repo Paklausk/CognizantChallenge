@@ -16,9 +16,10 @@ function SubmitForm(props) {
 	const [failNotificationMessage, setFailNotificationMessage] = useState(null);
 	const [tasks, setTasks] = useState([]);
 
-	let nameTagRef = React.createRef(), codeTagRef = React.createRef();
+	let nameTagRef = React.createRef(), codeTagRef = React.createRef(), mainTagRef = React.createRef();
 
 	useEffect(() => {
+		mainTagRef.current.classList.add('animate-in');
 		getTasksList(function (tasks) {
 			setTasks(tasks);
 		}, function (error) {
@@ -84,7 +85,7 @@ function SubmitForm(props) {
 	}
 
 	return (
-		<div className="submitForm container">
+		<div ref={mainTagRef} className="submitForm container animate-content animate-delay">
 			{ failNotificationMessage ? <FailNotification message={failNotificationMessage} onClose={() => setFailNotificationMessage(null)} /> : null }
 			{ showSuccessNotification ? <SuccessNotification onClose={() => setShowSuccessNotification(false)} /> : null }
 			<div className="field"><TextField id="developers-name" inputRef={nameTagRef} fullWidth margin="dense" label="Name" variant="outlined" /></div>
